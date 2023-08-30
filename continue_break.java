@@ -9,6 +9,10 @@ class continue_break
           continue; 
         }
          System.out.println(i);
+        if(i==3)
+        {
+            break;
+        }
     }
    }
 }
