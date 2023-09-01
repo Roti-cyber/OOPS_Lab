@@ -1,21 +1,14 @@
-import java.util.*;
-class two_num
+class Program_1
 {
     public static void main(String args[])
     {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter a number:");
-        int a=sc.nextInt();
-        System.out.println("Enter another number:");
-        int b=sc.nextInt();
-        if(a>b)
-        {
-            System.out.println("The bigger number is:"+a);
-        }
-        else
-        {
-            System.out.println("The bigger number is:"+b);
-        }
-        sc.close();
+        int calc=0;
+       for(int i=0;i<=10;i++)
+       {
+        calc=20-2*i;
+        System.out.println("x:"+i);
+        System.out.println("y:"+calc);
+
+       }
     }
 }
