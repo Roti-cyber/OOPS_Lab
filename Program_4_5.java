@@ -1,41 +1,31 @@
 import java.util.*;
-class Maximum_num
+class Insert
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n=0;
-        System.out.println("Enter number of elements:");
-        n=sc.nextInt();
-        int[] arr=new int[n];
-        int num,c=1;
-        int max_num=0;
-        int max_count=0;
+        System.out.println("Enter the number of elements:");
+        int n=sc.nextInt();
+        int num=0;
+        int[] arr=new int[n+1];
         for(int i=0;i<n;i++)
         {
             System.out.println("Enter the element:");
-            num=sc.nextInt();
-            arr[i]=num;
+            arr[i]=sc.nextInt();
         }
-        for(int i=0;i<n;i++)
+        System.out.println("Enter the position where you want element to be inserted:");
+        int pos=sc.nextInt();
+        System.out.println("Enter element to be inserted:");
+        int ele=sc.nextInt();
+        for(int j=n-1;j>=pos;j--)
         {
-            num=arr[i];
-            for(int j=0;j<n;j++)
-            {
-                if(arr[j]==num)
-                {
-                    
-                    c++;
-                }
-            }
-            if(max_count<c)
-            {
-                max_count=c;
-                max_num=num;
-            }
-            c=0;
+           
+            arr[j+1]=arr[j];
         }
-        System.out.println("The major elemnt is:"+max_num);
-
+        arr[pos]=ele;
+        for(int i=0;i<n+1;i++)
+        {
+            System.out.print(arr[i]+",");
+        }
     }
 }
