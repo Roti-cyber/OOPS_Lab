@@ -10,7 +10,8 @@ class Array
         {
             System.out.println("Enter a number:");
             num=sc.nextInt();
-            sum=sum+num;
+            array[i]=num;
+            sum=sum+array[i];
         }
         System.out.println("Sum of numbers is:"+sum);
         
